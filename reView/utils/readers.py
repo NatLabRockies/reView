@@ -402,24 +402,24 @@ def read_timeseries(file, project, gids=None, nsteps=None,
     config = Config(project)
     data = meta.rename(columns=config.legacy_mapping)
 
+    # If no time index found, raise error
+    variables = list(ds)
+    time_index = [t for t in variables if "time_index" in t][0]
+    if not time_index:
+        raise NotImplementedError("Cannot handle the time series formatting "
+                                  f"in {file}.")
+
     # Set nsteps
     if nsteps is None:
-        nsteps = ds["time_index"].shape[0]
+        nsteps = ds[time_index].shape[0]
 
     # Find site indices
     if gids:
         meta = meta[meta["sc_point_gid"].isin(gids)]
     idx = list(meta.index)
 
-    # If no time index found, raise error
-    variables = list(ds)
-    if not any("time_index" in var for var in variables):
-        raise NotImplementedError("Cannot handle the time series formatting "
-                                  f"in {file}.")
-
     # If dset is associated with a year time index, use that time index
-    time_index = "time_index"
-    if "-" in variable and "time_index" not in variables:
+    if "-" in variable and time_index not in variables:
         year = int(variable.split("-")[-1])
         time_index = f"time_index-{year}"
 
@@ -432,8 +432,15 @@ def read_timeseries(file, project, gids=None, nsteps=None,
     weeks = [t.isocalendar().week for t in dtime]
     months = [t.month for t in dtime]
 
+    # Set the scale factor on this data
+    scale = 1
+    if "loss" in variable and "percent" in variable:
+        scale = 100
+    elif "scale_factor" in ds[variable].attrs:
+        scale = ds[variable].attrs["scale_factor"] 
+
     # Process target data set
-    data = ds[variable][:nsteps, idx]
+    data = ds[variable][:nsteps, idx] / scale
     data = data.mean(axis=1)
 
     # Get units

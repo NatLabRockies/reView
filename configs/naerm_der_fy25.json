@@ -1,0 +1,5 @@
+{
+    "project_name": "NAERM DER - FY25",
+    "directory": "~/review_datasets/naerm_der_fy25/",
+    "var_options": "~/review_datasets/naerm_der_fy25/variable_options.csv"
+}

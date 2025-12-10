@@ -14,6 +14,7 @@ from reView.layout.styles import (
 )
 from reView.layout.options import (
     BASEMAP_OPTIONS,
+    CHART_HEIGHT,
     COLOR_OPTIONS,
     REGION_OPTIONS,
     STATE_OPTIONS,
@@ -182,14 +183,14 @@ def map_div(id_prefix, class_name=None):
             ),
             dcc.Graph(
                 id=f"{id_prefix}_map",
-                style={"height": 750},
+                style={"height": CHART_HEIGHT},
                 config={
                     "scrollZoom": True,
                     "showSendToCloud": True,
                     "plotlyServerURL": "https://chart-studio.plotly.com",
                     "toImageButtonOptions": {
                         "width": 1250,
-                        "height": 750,
+                        "height": CHART_HEIGHT,
                         "filename": "custom_review_map",
                     }
                 },

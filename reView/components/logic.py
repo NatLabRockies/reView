@@ -68,7 +68,8 @@ def format_capacity_title(
         df = df[df["sc_point_gid"].isin(gids)]
 
     total_capacity = Q_(df[capacity_col_name].sum(), "MW")                      # Q_ is also unintuitive
-    total_capacity = f"{total_capacity.to_compact():~H.2f}"
-    num_sites = f"{df.shape[0]:,}"
+    compact_capacity = total_capacity.to_compact()
+    total_capacity = f"Remaining Capacity: {compact_capacity:~H.2f}"
+    num_sites = f"Number of Sites: {df.shape[0]:,}"
 
     return total_capacity, num_sites

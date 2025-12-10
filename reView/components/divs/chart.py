@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 
 from dash import dcc, html
 
-from reView.layout.options import CHART_OPTIONS
+from reView.layout.options import CHART_OPTIONS, CHART_HEIGHT
 from reView.utils.constants import DEFAULT_POINT_SIZE
 from reView.layout.styles import (
     OPTION_STYLE,
@@ -226,12 +226,12 @@ def chart_div(id_prefix, class_name=None):
             ),
             dcc.Graph(
                 id=f"{id_prefix}_chart",
-                style={"height": 750},
+                style={"height": CHART_HEIGHT},
                 config={
                     "showSendToCloud": True,
                     "toImageButtonOptions": {
                         "width": 1250,
-                        "height": 750,
+                        "height": CHART_HEIGHT,
                     },
                     "plotlyServerURL": "https://chart-studio.plotly.com",
                 },

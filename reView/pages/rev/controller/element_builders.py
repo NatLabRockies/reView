@@ -409,60 +409,63 @@ class Plots:
         assert trace_type in ["bar", "line"], msg
 
         # Create the plottable dataframe
-        main_df = None
+        data = None
         units = []
         key1 = list(self.datasets)[0]
         for key, df in self.datasets.items():
             if df["units"].iloc[0]:
                 units.append(df["units"].iloc[0])
-            if main_df is None:
-                main_df = df.copy()
+            if data is None:
+                data = df.copy()
                 if time_period != "original":
-                    main_df = self._aggregate_timeseries(main_df, y_var,
-                                                         time_period)
-                main_df[self.GROUP] = key
+                    data = self._aggregate_timeseries(data, y_var, time_period)
+                data[self.GROUP] = key
             else:
                 if time_period != "original":
                     df = self._aggregate_timeseries(df, y_var, time_period)
                 df[self.GROUP] = key
-                main_df = pd.concat([main_df, df])
+                data = pd.concat([data, df])
+
+        # Make sure we're not plotting mutliple y-variables
+        if units:
+            assert len(np.unique(units)) == 1, msg
+            msg = "Multiple y-variable units detected"
+            label = units[0]
 
         # Get the right x-axis and y-axis ranges
         if time_period in ["cdf", "pdf"]:
             x = y_var
             y = "Probability"
+            if units:
+                x = label
+                data = data.rename(columns={y_var: label})
         else:
             x = "time"
             y = y_var
-        ymin = main_df[y].min()
-        ymax = main_df[y].max()
+            if units:
+                y = label
+                data = data.rename(columns={y_var: label})
 
-        # Make sure we're not plotting mutliple y-variables
-        label = "Profile"
-        if units:
-            assert len(np.unique(units)
-                       ) == 1, "Multiple y-variable units detected"
-            label = units[0]
-        main_df = main_df.rename(columns={"profile": label})
+        # Y-axis ranges
+        ymin = data[y].min()
+        ymax = data[y].max()
 
         # Aggregate time series if needed
         if trace_type == "bar":
-            df = main_df[main_df[self.GROUP] == key1]
+            df = data[data[self.GROUP] == key1]
             fig = px.bar(
                 data_frame=df,  # Single dataset for now
                 x=x,
-                y=label,
-                color=label,
-                color_discrete_sequence=px.colors.sequential.Viridis
+                y=y
             )
-            fig.update_layout(hovermode="x unified")
+            fig.update_layout(hovermode="x unified", bargap=0)
         else:
             fig = px.line(
-                data_frame=main_df,
+                data_frame=data,
                 line_group=self.GROUP,
                 color=self.GROUP,
                 x=x,
-                y=label
+                y=y
             )
 
             fig.update_layout(hovermode="x")
@@ -475,8 +478,8 @@ class Plots:
         if time_period == "original":
             fig.update_layout(
                 xaxis_range=[
-                    main_df["time"].iloc[0],
-                    main_df["time"].iloc[500]
+                    data["time"].iloc[0],
+                    data["time"].iloc[500]
                 ]
             )
         fig = self._update_fig_layout(fig, y_var)
@@ -512,6 +515,8 @@ class Plots:
                 time = [t.strftime("%H:%M") for t in time]
             elif time_period == "weekly":
                 time = pd.date_range(time1, time2, freq="1W")
+                if len(time) == 53:
+                    time = time[:-1]
             elif time_period == "monthly":
                 time = pd.date_range(time1, time2, freq="MS")
                 time = [t + pd.offsets.MonthEnd() for t in time]

@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 
 from dash import dcc, html
 
+from reView.layout.options import TS_HEIGHT
 from reView.utils.constants import DEFAULT_POINT_SIZE
 from reView.layout.styles import (
     OPTION_STYLE,
@@ -176,13 +177,13 @@ def time_div(id_prefix, class_name=None):
             ),
             dcc.Graph(
                 id=f"{id_prefix}_time",
-                style={"height": 750},
+                style={"height": TS_HEIGHT},
                 config={
                     "showSendToCloud": True,
                     "plotlyServerURL": "https://chart-studio.plotly.com",
                     "toImageButtonOptions": {
                         "width": 1250,
-                        "height": 750,
+                        "height": TS_HEIGHT,
                         "filename": "custom_review_time",
                     },
                 },

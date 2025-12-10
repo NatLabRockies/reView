@@ -6,6 +6,8 @@ import us  # noqa: E0401
 
 from reView.utils.constants import COLORS, COLORS_Q
 
+CHART_HEIGHT = 500
+TS_HEIGHT = 400
 REGIONS = {
     "Pacific": ["Oregon", "Washington"],
     "Mountain": ["Colorado", "Idaho", "Montana", "Wyoming"],

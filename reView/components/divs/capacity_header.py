@@ -5,7 +5,7 @@ from dash import dcc, html
 
 def capacity_header(id_prefix, style=None, class_name=None,
                     cap_title="Remaining Capacity",
-                    count_title="Number of Sites", small=False):
+                    count_title="Number of Sites", small=True):
     """Standard capacity output header divs.
 
     Parameters
@@ -55,7 +55,7 @@ def capacity_header(id_prefix, style=None, class_name=None,
         children=[
             html.Div(
                 [
-                    html.H5(cap_title) if small else html.H2(cap_title),
+                    # html.H5(cap_title) if small else html.H2(cap_title),
                     dcc.Loading(capacity, type="circle"),
                 ],
                 className=class_name,
@@ -65,11 +65,11 @@ def capacity_header(id_prefix, style=None, class_name=None,
             # Print site count after all the filters are applied
             html.Div(
                 [
-                    html.H5(count_title) if small else html.H2(count_title),
+                    # html.H5(count_title) if small else html.H2(count_title),
                     dcc.Loading(count, type="circle"),
                 ],
                 className=class_name,
-                style={"margin-bottom": "-10px", "margin-left": "150px"}
+                style={"margin-bottom": "-10px", "margin-left": "85px"}
             )
         ]
     )

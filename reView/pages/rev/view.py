@@ -22,7 +22,6 @@ from reView.components import (
 from reView.utils.config import Config
 from reView.utils.functions import get_project_defaults
 
-
 DEFAULT_PROJECT = get_project_defaults()["rev"]
 if DEFAULT_PROJECT not in list(Config.projects):
     DEFAULT_PROJECT = sorted(Config.projects)[0]

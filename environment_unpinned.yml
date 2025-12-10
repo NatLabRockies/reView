@@ -3,6 +3,7 @@ channels:
     - conda-forge
     - nrel
 dependencies:
+    - python=3.11
     - addfips
     - colorama
     - dash

@@ -463,6 +463,7 @@ class Map:
                 text = (
                     df["county"]
                     + df["state"]
+                    + f"<br> sc_point_gid: {df['sc_point_gid']}"
                     + "<br>   "
                     + df[self.color_var].astype(str)
                     + " "
@@ -495,6 +496,8 @@ class Map:
                 text = (
                     df["county"]
                     + df["state"]
+                    + "<br> sc_point_gid:    "
+                    + df['sc_point_gid'].astype(str)
                     + extra_str
                     + f"<br>    {convert_to_title(self.color_var)}:   "
                     + df[self.color_var].round(2).astype(str)
