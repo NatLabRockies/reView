@@ -3,7 +3,7 @@ click==8.1.7
 dash==2.18.1
 dash_bootstrap_components==1.6.0
 flask-caching==2.3.0
-geopandas==1.0.1
+geopandas>=1.1.2
 h5py==3.12.1
 NREL-reV==0.9.4
 numpy==1.24.4
