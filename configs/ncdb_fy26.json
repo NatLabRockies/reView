@@ -1,0 +1,720 @@
+{
+    "project_name": "NCDB - FY26",
+    "directory": "/Users/twillia2/review_datasets/ncdb_fy26",
+    "variables": {
+        "lbw_ncdb_2020_supply-curve": {
+            "model": "ncdb",
+            "tech": "lbw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "lbw_ncdb_2030_supply-curve": {
+            "model": "ncdb",
+            "tech": "lbw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "lbw_ncdb_2040_supply-curve": {
+            "model": "ncdb",
+            "tech": "lbw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "lbw_ncdb_2050_supply-curve": {
+            "model": "ncdb",
+            "tech": "lbw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "lbw_ncdb_historical_2000_supply-curve": {
+            "model": "ncdb",
+            "tech": "lbw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "lbw_ncdb_historical_2010_supply-curve": {
+            "model": "ncdb",
+            "tech": "lbw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3cc_historical_2000": {
+            "model": "ecearth3cc",
+            "tech": "lbw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3cc_historical_2000_tva": {
+            "model": "ecearth3cc",
+            "tech": "lbw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3cc_historical_2010": {
+            "model": "ecearth3cc",
+            "tech": "lbw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3cc_historical_2010_tva": {
+            "model": "ecearth3cc",
+            "tech": "lbw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3cc_ssp245_2020": {
+            "model": "ecearth3cc",
+            "tech": "lbw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3cc_ssp245_2030_supply-curve": {
+            "model": "ecearth3cc",
+            "tech": "lbw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3cc_ssp245_2040": {
+            "model": "ecearth3cc",
+            "tech": "lbw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3cc_ssp245_2050_supply-curve": {
+            "model": "ecearth3cc",
+            "tech": "lbw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3veg_historical_2000": {
+            "model": "ecearth3veg",
+            "tech": "lbw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3veg_historical_2010": {
+            "model": "ecearth3veg",
+            "tech": "lbw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3veg_ssp245_2020": {
+            "model": "ecearth3veg",
+            "tech": "lbw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3veg_ssp245_2030_supply-curve": {
+            "model": "ecearth3veg",
+            "tech": "lbw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3veg_ssp245_2040": {
+            "model": "ecearth3veg",
+            "tech": "lbw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_ecearth3veg_ssp245_2050_supply-curve": {
+            "model": "ecearth3veg",
+            "tech": "lbw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_gfdlcm4_historical_2000": {
+            "model": "gfdlcm4",
+            "tech": "lbw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_gfdlcm4_historical_2010": {
+            "model": "gfdlcm4",
+            "tech": "lbw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_gfdlcm4_ssp245_2020": {
+            "model": "gfdlcm4",
+            "tech": "lbw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_gfdlcm4_ssp245_2030_supply-curve": {
+            "model": "gfdlcm4",
+            "tech": "lbw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_gfdlcm4_ssp245_2040": {
+            "model": "gfdlcm4",
+            "tech": "lbw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_gfdlcm4_ssp245_2050_supply-curve": {
+            "model": "gfdlcm4",
+            "tech": "lbw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_hrrr_historical_2015": {
+            "model": "wtk_hrrr",
+            "tech": "lbw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_hrrr_historical_2015_tva": {
+            "model": "wtk_hrrr",
+            "tech": "lbw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_mpiesm12hr_historical_2000": {
+            "model": "mpiesm12hr",
+            "tech": "lbw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_mpiesm12hr_historical_2010": {
+            "model": "mpiesm12hr",
+            "tech": "lbw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_mpiesm12hr_ssp245_2020": {
+            "model": "mpiesm12hr",
+            "tech": "lbw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_mpiesm12hr_ssp245_2030_supply-curve": {
+            "model": "mpiesm12hr",
+            "tech": "lbw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_mpiesm12hr_ssp245_2040": {
+            "model": "mpiesm12hr",
+            "tech": "lbw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_mpiesm12hr_ssp245_2050_supply-curve": {
+            "model": "mpiesm12hr",
+            "tech": "lbw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_taiesm1_historical_2000": {
+            "model": "taiesm1",
+            "tech": "lbw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_taiesm1_historical_2010": {
+            "model": "taiesm1",
+            "tech": "lbw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "lbw_wind_reference_supply-curve_taiesm1_ssp245_2020": {
+            "model": "taiesm1",
+            "tech": "lbw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_taiesm1_ssp245_2030_supply-curve": {
+            "model": "taiesm1",
+            "tech": "lbw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_taiesm1_ssp245_2040": {
+            "model": "taiesm1",
+            "tech": "lbw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_taiesm1_ssp245_2050_supply-curve": {
+            "model": "taiesm1",
+            "tech": "lbw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "lbw_wind_reference_supply-curve_wtk_hrrr_supply-curve": {
+            "model": "wtk",
+            "tech": "lbw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "lbw_wtk_reference_supply-curve": {
+            "model": "wtk",
+            "tech": "lbw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "osw_ncdb_2020_supply-curve": {
+            "model": "ncdb",
+            "tech": "osw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "osw_ncdb_2030_supply-curve": {
+            "model": "ncdb",
+            "tech": "osw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "osw_ncdb_2040_supply-curve": {
+            "model": "ncdb",
+            "tech": "osw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "osw_ncdb_2050_supply-curve": {
+            "model": "ncdb",
+            "tech": "osw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "osw_ncdb_historical_2000_supply-curve": {
+            "model": "ncdb",
+            "tech": "osw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "osw_ncdb_historical_2010_supply-curve": {
+            "model": "ncdb",
+            "tech": "osw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3cc_historical_2000": {
+            "model": "ecearth3cc",
+            "tech": "osw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3cc_historical_2010": {
+            "model": "ecearth3cc",
+            "tech": "osw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3cc_ssp245_2020": {
+            "model": "ecearth3cc",
+            "tech": "osw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3cc_ssp245_2030_supply-curve": {
+            "model": "ecearth3cc",
+            "tech": "osw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3cc_ssp245_2040": {
+            "model": "ecearth3cc",
+            "tech": "osw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3cc_ssp245_2050_supply-curve": {
+            "model": "ecearth3cc",
+            "tech": "osw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3veg_historical_2000": {
+            "model": "ecearth3veg",
+            "tech": "osw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3veg_historical_2010": {
+            "model": "ecearth3veg",
+            "tech": "osw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3veg_ssp245_2020": {
+            "model": "ecearth3veg",
+            "tech": "osw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3veg_ssp245_2030_supply-curve": {
+            "model": "ecearth3veg",
+            "tech": "osw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3veg_ssp245_2040": {
+            "model": "ecearth3veg",
+            "tech": "osw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_ecearth3veg_ssp245_2050_supply-curve": {
+            "model": "ecearth3veg",
+            "tech": "osw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_gfdlcm4_historical_2000": {
+            "model": "gfdlcm4",
+            "tech": "osw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "osw_reference_supply-curve_post_proc_gfdlcm4_historical_2010": {
+            "model": "gfdlcm4",
+            "tech": "osw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "osw_reference_supply-curve_post_proc_gfdlcm4_ssp245_2020": {
+            "model": "gfdlcm4",
+            "tech": "osw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_gfdlcm4_ssp245_2030_supply-curve": {
+            "model": "gfdlcm4",
+            "tech": "osw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_gfdlcm4_ssp245_2040": {
+            "model": "gfdlcm4",
+            "tech": "osw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_gfdlcm4_ssp245_2050_supply-curve": {
+            "model": "gfdlcm4",
+            "tech": "osw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_mpiesm12hr_historical_2000": {
+            "model": "mpiesm12hr",
+            "tech": "osw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "osw_reference_supply-curve_post_proc_mpiesm12hr_historical_2010": {
+            "model": "mpiesm12hr",
+            "tech": "osw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "osw_reference_supply-curve_post_proc_mpiesm12hr_ssp245_2020": {
+            "model": "mpiesm12hr",
+            "tech": "osw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_mpiesm12hr_ssp245_2030_supply-curve": {
+            "model": "mpiesm12hr",
+            "tech": "osw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_mpiesm12hr_ssp245_2040": {
+            "model": "mpiesm12hr",
+            "tech": "osw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_mpiesm12hr_ssp245_2050_supply-curve": {
+            "model": "mpiesm12hr",
+            "tech": "osw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_taiesm1_historical_2000": {
+            "model": "taiesm1",
+            "tech": "osw",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "osw_reference_supply-curve_post_proc_taiesm1_historical_2010": {
+            "model": "taiesm1",
+            "tech": "osw",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "osw_reference_supply-curve_post_proc_taiesm1_ssp245_2020": {
+            "model": "taiesm1",
+            "tech": "osw",
+            "decade": "2020",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_taiesm1_ssp245_2030_supply-curve": {
+            "model": "taiesm1",
+            "tech": "osw",
+            "decade": "2030",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_taiesm1_ssp245_2040": {
+            "model": "taiesm1",
+            "tech": "osw",
+            "decade": "2040",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_taiesm1_ssp245_2050_supply-curve": {
+            "model": "taiesm1",
+            "tech": "osw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "osw_reference_supply-curve_post_proc_wtk_hrrr_supply-curve": {
+            "model": "wtk",
+            "tech": "osw",
+            "decade": "2050",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_ecearth3cc_historical_2000": {
+            "model": "ecearth3cc",
+            "tech": "upv",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_ecearth3cc_historical_2000_tva": {
+            "model": "ecearth3cc",
+            "tech": "upv",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_ecearth3cc_historical_2010": {
+            "model": "ecearth3cc",
+            "tech": "upv",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_ecearth3cc_historical_2010_tva": {
+            "model": "ecearth3cc",
+            "tech": "upv",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_ecearth3cc_ssp245_2020": {
+            "model": "ecearth3cc",
+            "tech": "upv",
+            "decade": "2020",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_ecearth3cc_ssp245_2030_supply-curve": {
+            "model": "ecearth3cc",
+            "tech": "upv",
+            "decade": "2030",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_ecearth3cc_ssp245_2040": {
+            "model": "ecearth3cc",
+            "tech": "upv",
+            "decade": "2040",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_ecearth3cc_ssp245_2050_supply-curve": {
+            "model": "ecearth3cc",
+            "tech": "upv",
+            "decade": "2050",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_ecearth3veg_historical_2000": {
+            "model": "ecearth3veg",
+            "tech": "upv",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_ecearth3veg_historical_2010": {
+            "model": "ecearth3veg",
+            "tech": "upv",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_ecearth3veg_ssp245_2020": {
+            "model": "ecearth3veg",
+            "tech": "upv",
+            "decade": "2020",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_ecearth3veg_ssp245_2030_supply-curve": {
+            "model": "ecearth3veg",
+            "tech": "upv",
+            "decade": "2030",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_ecearth3veg_ssp245_2040": {
+            "model": "ecearth3veg",
+            "tech": "upv",
+            "decade": "2040",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_ecearth3veg_ssp245_2050_supply-curve": {
+            "model": "ecearth3veg",
+            "tech": "upv",
+            "decade": "2050",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_gfdlcm4_historical_2000": {
+            "model": "gfdlcm4",
+            "tech": "upv",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_gfdlcm4_historical_2010": {
+            "model": "gfdlcm4",
+            "tech": "upv",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_gfdlcm4_ssp245_2020": {
+            "model": "gfdlcm4",
+            "tech": "upv",
+            "decade": "2020",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_gfdlcm4_ssp245_2030_supply-curve": {
+            "model": "gfdlcm4",
+            "tech": "upv",
+            "decade": "2030",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_gfdlcm4_ssp245_2040": {
+            "model": "gfdlcm4",
+            "tech": "upv",
+            "decade": "2040",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_gfdlcm4_ssp245_2050_supply-curve": {
+            "model": "gfdlcm4",
+            "tech": "upv",
+            "decade": "2050",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_mpiesm12hr_historical_2000": {
+            "model": "mpiesm12hr",
+            "tech": "upv",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_mpiesm12hr_historical_2010": {
+            "model": "mpiesm12hr",
+            "tech": "upv",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_mpiesm12hr_ssp245_2020": {
+            "model": "mpiesm12hr",
+            "tech": "upv",
+            "decade": "2020",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_mpiesm12hr_ssp245_2030_supply-curve": {
+            "model": "mpiesm12hr",
+            "tech": "upv",
+            "decade": "2030",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_mpiesm12hr_ssp245_2040": {
+            "model": "mpiesm12hr",
+            "tech": "upv",
+            "decade": "2040",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_mpiesm12hr_ssp245_2050_supply-curve": {
+            "model": "mpiesm12hr",
+            "tech": "upv",
+            "decade": "2050",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_nsrdb_supply-curve": {
+            "model": "nsrdb",
+            "tech": "upv",
+            "decade": "2050",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_taiesm1_historical_2000": {
+            "model": "taiesm1",
+            "tech": "upv",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_taiesm1_historical_2010": {
+            "model": "taiesm1",
+            "tech": "upv",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "upv_01_reference_supply-curve_taiesm1_ssp245_2020": {
+            "model": "taiesm1",
+            "tech": "upv",
+            "decade": "2020",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_taiesm1_ssp245_2030_supply-curve": {
+            "model": "taiesm1",
+            "tech": "upv",
+            "decade": "2030",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_taiesm1_ssp245_2040": {
+            "model": "taiesm1",
+            "tech": "upv",
+            "decade": "2040",
+            "period": "future"
+        },
+        "upv_01_reference_supply-curve_taiesm1_ssp245_2050_supply-curve": {
+            "model": "taiesm1",
+            "tech": "upv",
+            "decade": "2050",
+            "period": "future"
+        },
+        "upv_ncdb_2020_supply-curve": {
+            "model": "ncdb",
+            "tech": "upv",
+            "decade": "2020",
+            "period": "future"
+        },
+        "upv_ncdb_2030_supply-curve": {
+            "model": "ncdb",
+            "tech": "upv",
+            "decade": "2030",
+            "period": "future"
+        },
+        "upv_ncdb_2040_supply-curve": {
+            "model": "ncdb",
+            "tech": "upv",
+            "decade": "2040",
+            "period": "future"
+        },
+        "upv_ncdb_2050_supply-curve": {
+            "model": "ncdb",
+            "tech": "upv",
+            "decade": "2050",
+            "period": "future"
+        },
+        "upv_ncdb_historical_2000_supply-curve": {
+            "model": "ncdb",
+            "tech": "upv",
+            "decade": "2000",
+            "period": "historical"
+        },
+        "upv_ncdb_historical_2010_supply-curve": {
+            "model": "ncdb",
+            "tech": "upv",
+            "decade": "2010",
+            "period": "historical"
+        },
+        "upv_nsrdb_reference_supply-curve": {
+            "model": "nsrdb",
+            "tech": "upv",
+            "decade": "2050",
+            "period": "future"
+        }
+    }
+}

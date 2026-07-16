@@ -22,7 +22,7 @@ with open(VERSION_FILE, encoding="utf-8") as f:
 with open(os.path.join(REPO_DIR, "README.md"), encoding="utf-8") as f:
     README = f.read()
 
-with open("requirements.txt") as f:
+with open("requirements_nodeps.txt") as f:
     INSTALL_REQUIREMENTS = f.readlines()
 
 with open("requirements_dev.txt") as f:
